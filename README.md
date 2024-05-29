@@ -24,25 +24,24 @@ Ensure you have the following installed:
 - Google Cloud SDK
 
 ### Enable Google Cloud
+- Enable APIs for Vertex AI
+- Initialize Google Cloud for the project
 
-Learn how to set up Google Cloud for the Gemini Flights Mission:
-
-
-
-### Google Cloud Initialization
 
 1. **Clone the Repository**:
    ```sh
-   git clone https://github.com/your-repo/gemini-chat-interface.git
+   git clone [https://github.com/your-repo/gemini-chat-interface.git](https://github.com/your-repo/gemini-chat-interface.git)
    cd gemini-chat-interface
 
-2. **Set Up a Virtual Environment**:
-  ```sh
-  python -m venv venv
-  source venv/bin/activate
+3. **Set Up a Virtual Environment**:
+   ```sh
+   python -m venv venv
+   source venv/bin/activate
 
-3. **Install Streamlit**
+5. **Install Streamlit**:
+   ```sh
+   pip install streamlit
 
-3. **Install Streamlit**:
-  ```sh
-  pip install streamlit
+7. **Run the Streamlit Application**:
+   ```sh
+   streamlit run gemini_chat.py
