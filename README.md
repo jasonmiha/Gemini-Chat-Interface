@@ -15,8 +15,6 @@ Welcome to my Gemini Chat Interface! This project leverages Google Cloud's Verte
 - **Interactive Chat**: Real-time conversation capabilities with a responsive AI assistant.
 - **Customizable Responses**: Ability to personalize the AI assistant's behavior and responses.
 
-## Setup Instructions
-
 ### Prerequisites
 
 Ensure you have the following installed:
@@ -27,6 +25,7 @@ Ensure you have the following installed:
 - Enable APIs for Vertex AI
 - Initialize Google Cloud for the project
 
+## Running the Application
 
 1. **Clone the Repository**:
    ```sh
