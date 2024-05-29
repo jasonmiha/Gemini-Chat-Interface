@@ -42,25 +42,27 @@ def llm_function(chat: ChatSession, query):
 
     st.title("Gemini Explorer")
 
-    # Initialize chat history
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
+# Initialize chat history
+if "messages" not in st.session_state:
+    st.session_state.messages = []
 
-    # Display and load to chat history
-    for index, message in enumerate(st.session_state.messages):
-        content = Content(
-            role = message["role"],
-            parts = [ Part.from_text(message["content"])]
-        )
+# Display and load to chat history
+for index, message in enumerate(st.session_state.messages):
+    content = Content(
+        role = message["role"],
+        parts = [ Part.from_text(message["content"])]
+    )
 
-        if index != 0:
-            with st.chat_message(message["role"]):
-                st.markdown(message["content"])
+    if index != 0:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
 
-        chat.history.append(content)
+    chat.history.append(content)
 
 # For Initial message startup
 if len(st.session_state.messages) == 0:
+    initial_prompt = "Introduce yourself as ReX, an assistant powered by Google Gemini. You use emojis to be interactive"
+    llm_function(chat, initial_prompt)
     
 # For capturing user input
 query = st.chat_input("Gemini Explorer")
